@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine con Causa | ¡Compra tu Boleto y Transforma Vidas!</title>
+    <!-- Carga de Tailwind CSS para diseño rápido y responsive -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- COMENTARIO: Integración de Pixels y GA4 -->
+    <!-- Aquí se insertarán el Pixel de Meta y la etiqueta de Google Ads. -->
+    <!-- La integración con GA4 (monitor de eventos) se hará vía JS al final del body. -->
+
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            /* Fondo base cálido para la landing */
+            background-color: #fcfbf8; 
+        }
+        /* Estilo base para botones CTA (Contraste y Microinteracción) */
+        .cta-btn {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 6px 15px rgba(236, 72, 153, 0.4); /* Sombra basada en pink-600 */
+        }
+        .cta-btn:hover {
+            box-shadow: 0 10px 20px rgba(236, 72, 153, 0.6);
+            transform: translateY(-3px) scale(1.02); /* Leve rebote */
+        }
+        .trust-seal-icon {
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Barra de Navegación Compacta y Fija (Mobile-First) -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="text-lg font-bold text-indigo-700">HuellitasXSiempre</div>
+            
+            <!-- CTA Principal Fijo en Header (Refuerza acción) -->
+            <a href="#purchase" class="cta-btn text-sm font-bold px-3 py-1.5 bg-pink-600 text-white rounded-lg hover:bg-pink-700">
+                Comprar Boleto
+            </a>
+        </div>
+    </header>
+
+    <main>
+        
+        <!-- 1. Hero Section (ATENCIÓN & ACCIÓN) -->
+        <section id="hero" class="relative bg-indigo-50 py-16 sm:py-20 lg:py-24 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <!-- H1: Título de Conversión -->
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-indigo-900 leading-tight mb-4">
+                    Cine con Causa: <span class="text-pink-600">Cambia Vidas</span> Asistiendo
+                </h1>
+                <!-- Subtítulo breve -->
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                    Todos los fondos recaudados apoyarán directamente a **Orejitas Peludas Somos tu Voz**, garantizando alimento y atención médica.
+                </p>
+                
+                <!-- Imagen real del refugio (Placeholder) -->
+                <div class="mx-auto max-w-xl mb-8 rounded-2xl shadow-xl overflow-hidden">
+                    <!-- Las imágenes deben ser WebP y optimizadas (ej. 120 KB máx para móvil) -->
+                    <img src="https://placehold.co/800x450/e0e0e0/555?text=[Imagen de un perro rescatado feliz]" 
+                         alt="Perro rescatado sonriendo, beneficiario del evento Cine con Causa" 
+                         class="w-full h-auto object-cover rounded-2xl transition duration-500 ease-in-out hover:opacity-90">
+                </div>
+
+                <!-- CTA Principal (Grande y Destacado) -->
+                <a id="purchase" href="#payment-gateway" class="cta-btn w-full sm:w-80 mx-auto px-10 py-4 bg-pink-600 text-white text-xl font-bold rounded-full hover:bg-pink-700 block">
+                    ¡Comprar Boleto Ahora! 🍿
+                </a>
+                
+                <!-- Sello de Transparencia (Genera Confianza) -->
+                <div class="mt-6 flex items-center justify-center space-x-2 text-indigo-700 trust-seal-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-sm font-semibold">100% Fondos Verificados | Somos HuellitasXSiempre</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Breve descripción del proyecto (INTERÉS) -->
+        <section class="py-16 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-2xl font-bold text-indigo-800 mb-4">¿Qué es HuellitasXSiempre?</h2>
+                <p class="text-gray-600 mb-4 leading-relaxed">
+                    Somos un movimiento social impulsado por voluntarios con una meta clara: ser el brazo de apoyo de refugios serios y transparentes. Nuestro enfoque es generar eventos creativos, como este **Cine con Causa**, para recaudar fondos de manera divertida y eficaz.
+                </p>
+                <p class="text-gray-600 leading-relaxed">
+                    Al comprar tu boleto, garantizas un plato de comida, vacunas y atención veterinaria urgente a los más de 50 animales que actualmente alberga el refugio **Orejitas Peludas Somos tu Voz**. ¡Tu ayuda tiene un impacto directo!
+                </p>
+            </div>
+        </section>
+
+        <!-- 3. Información del evento (DESEO) -->
+        <section class="py-16 bg-amber-50" id="event-info">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center text-indigo-800 mb-10">Detalles del Evento</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <!-- Columna de Detalles -->
+                    <div class="p-6 bg-white rounded-2xl shadow-lg">
+                        <ul class="space-y-4 text-lg">
+                            <li class="flex items-center space-x-3"><span class="text-pink-600 font-extrabold text-2xl">🗓️</span> <div><strong class="font-semibold">Fecha y Hora:</strong> Sábado 25 de Enero, 2026 | 5:00 PM</div></li>
+                            <li class="flex items-center space-x-3"><span class="text-pink-600 font-extrabold text-2xl">📍</span> <div><strong class="font-semibold">Lugar:</strong> Salón Comunal 'El Nogal' (Ver en mapa)</div></li>
+                            <li class="flex items-center space-x-3"><span class="text-pink-600 font-extrabold text-2xl">🎟️</span> <div><strong class="font-semibold">Costo:</strong> $100 MXN (Incluye entrada, palomitas y refresco)</div></li>
+                        </ul>
+                        <div class="mt-6 p-4 bg-indigo-50 rounded-xl">
+                            <h3 class="text-xl font-semibold text-indigo-700 mb-2">Sinopsis de Películas</h3>
+                            <p class="text-sm text-gray-600">Proyección de cortometrajes inspiradores sobre la amistad y el rescate animal, incluyendo un documental exclusivo sobre la labor de Orejitas Peludas.</p>
+                        </div>
+                         <!-- CTA Móvil: Google Maps -->
+                        <a href="https://maps.app.goo.gl/example" target="_blank" class="flex items-center justify-center mt-6 p-3 bg-indigo-600 text-white rounded-xl font-bold hover:bg-indigo-700 transition md:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 0L15 5.06l2.364 2.364a1 1 0 01-1.414 1.414L13 6.471l-.005.005-.006.007-.021.018-.005.005-.018.019-.005.006-.013.013-.007.007-.015.015-.004.004-.017.017-.005.006-.011.011-.005.005-.01.01-.004.004-.009.009-.003.003-.008.008-.003.003-.007.007-.002.002-.007.007-.001.001-.006.006-.001.001-.005.005-.001.001-.005.005-.001.001-.004.004-.001.001-.003.003-.001.001L8 10.457V18a2 2 0 104 0V5.05L15.95 4.05a7 7 0 01-.894 8.706l-4.707 4.707a1 1 0 01-1.414 0l-4.707-4.707A7 7 0 015.05 4.05z" clip-rule="evenodd" /></svg>
+                            Ver Ubicación en Google Maps
+                        </a>
+                    </div>
+
+                    <!-- Columna de Galería (Genera Deseo) -->
+                    <div>
+                        <h3 class="text-xl font-semibold text-indigo-700 mb-4">Un vistazo al impacto</h3>
+                        <div class="grid grid-cols-3 gap-2">
+                            <img src="https://placehold.co/150x150/d1d5db/374151?text=[Refugio]" alt="Fotografía del refugio" class="rounded-lg shadow-md aspect-square object-cover">
+                            <img src="https://placehold.co/150x150/d1d5db/374151?text=[Voluntarios]" alt="Voluntarios ayudando" class="rounded-lg shadow-md aspect-square object-cover">
+                            <img src="https://placehold.co/150x150/d1d5db/374151?text=[Mascota]" alt="Mascota en adopción" class="rounded-lg shadow-md aspect-square object-cover">
+                        </div>
+                        <p class="text-sm text-gray-500 mt-2 text-center">Fotos 100% auténticas del refugio Orejitas Peludas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Sección de Impacto Social (AUTORIDAD & EMOCIÓN) -->
+        <section class="py-16 bg-white" id="impacto">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold text-indigo-800 mb-10">Tu Boleto se Convierte en Ayuda Medible</h2>
+                
+                <!-- Infografías Simples -->
+                <div class="grid sm:grid-cols-3 gap-8 mb-12">
+                    <div class="p-6 bg-pink-50 rounded-xl shadow-inner border-b-4 border-pink-400">
+                        <p class="text-4xl font-extrabold text-pink-600 mb-2">128</p>
+                        <p class="font-semibold text-gray-700">Perros Rescatados</p>
+                    </div>
+                    <div class="p-6 bg-indigo-50 rounded-xl shadow-inner border-b-4 border-indigo-400">
+                        <p class="text-4xl font-extrabold text-indigo-600 mb-2">$85k MXN</p>
+                        <p class="font-semibold text-gray-700">Gasto Mensual Promedio</p>
+                    </div>
+                    <div class="p-6 bg-amber-50 rounded-xl shadow-inner border-b-4 border-amber-400">
+                        <p class="text-4xl font-extrabold text-amber-600 mb-2">32</p>
+                        <p class="font-semibold text-gray-700">En Espera de Adopción</p>
+                    </div>
+                </div>
+
+                <!-- Historia de un Perro Emblemático (Storytelling) -->
+                <div class="max-w-3xl mx-auto p-6 bg-gray-50 rounded-2xl border-l-4 border-pink-600 text-left">
+                    <h3 class="text-2xl font-bold text-pink-600 mb-3">La Historia de Max</h3>
+                    <p class="text-gray-700 italic">"Max llegó al refugio con una pata rota y mucho miedo. Gracias a eventos como Cine con Causa, pudimos pagar su cirugía y su rehabilitación completa. Hoy, corre libre en su nuevo hogar. Cada boleto es la oportunidad de escribir un final feliz como el de Max."</p>
+                    <p class="mt-3 text-sm font-semibold text-gray-500">- Testimonio del Equipo del Refugio.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Llamado a la acción reforzado (ACCIÓN) -->
+        <section class="py-16 bg-indigo-700 text-white text-center">
+            <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
+                <p class="text-3xl font-extrabold mb-6">Con tu apoyo salvamos vidas. No te lo pierdas.</p>
+                <!-- CTA Reforzado -->
+                <a href="#payment-gateway" class="cta-btn w-full sm:w-80 mx-auto px-10 py-4 bg-pink-600 text-white text-xl font-bold rounded-full hover:bg-pink-700 block">
+                    ¡Asegura tu Lugar! 🎟️
+                </a>
+            </div>
+        </section>
+
+        <!-- 6. Testimonios (EMOCIÓN & CONFIANZA) -->
+        <section class="py-16 bg-white" id="testimonios">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center text-indigo-800 mb-10">Voces de la Comunidad</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Testimonio 1 (Voluntario) -->
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-md border-t-4 border-indigo-400">
+                        <p class="italic text-gray-700">"Ser voluntaria ha cambiado mi perspectiva. La transparencia en HuellitasXSiempre me da la confianza para donar mi tiempo."</p>
+                        <p class="mt-4 font-semibold text-indigo-600">- Sofía R., Voluntaria</p>
+                    </div>
+                    <!-- Testimonio 2 (Adoptante) -->
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-md border-t-4 border-pink-400">
+                        <p class="italic text-gray-700">"El proceso de adopción fue claro y lleno de apoyo. Mi mejor amigo, 'Milo', viene de Orejitas Peludas."</p>
+                        <p class="mt-4 font-semibold text-pink-600">- Carlos G., Adoptante</p>
+                    </div>
+                    <!-- Testimonio 3 (Donante) -->
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-md border-t-4 border-amber-400">
+                        <p class="italic text-gray-700">"Me encanta que el Cine con Causa sea una forma divertida de ayudar. Es fácil y sé exactamente a dónde va mi dinero."</p>
+                        <p class="mt-4 font-semibold text-amber-600">- Laura P., Donante Frecuente</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Información del refugio (AUTORIDAD & ENTIDAD) -->
+        <section class="py-16 bg-indigo-50" id="refugio-info">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold text-indigo-800 mb-4">El Refugio que Apoyamos: Orejitas Peludas Somos tu Voz</h2>
+                <p class="text-lg text-gray-600 mb-6">HuellitasXSiempre destina el 100% de lo recaudado a esta noble causa. Conoce a quienes hacen posible el rescate día a día.</p>
+                
+                <div class="mx-auto max-w-sm mb-6">
+                    <img src="https://placehold.co/400x200/d1d5db/374151?text=[Foto del Refugio]" alt="Fotografía del refugio Orejitas Peludas" class="rounded-xl shadow-lg w-full">
+                </div>
+                
+                <a href="#" class="inline-flex items-center text-pink-600 font-bold hover:underline">
+                    Ver su historia completa →
+                </a>
+            </div>
+        </section>
+
+        <!-- 8. Formulario de registro (LEAD GENERATION) -->
+        <section class="py-16 bg-white" id="mailchimp-form">
+            <div class="max-w-md mx-auto px-4 sm:px-6 lg:px-8 text-center p-8 border-2 border-dashed border-pink-300 rounded-3xl shadow-xl">
+                <h2 class="text-2xl font-bold text-pink-600 mb-4">¡No te pierdas el próximo evento!</h2>
+                <p class="text-gray-600 mb-6">Regístrate para recibir actualizaciones del evento, historias de rescate y ofertas de boletos anticipados.</p>
+                
+                <!-- COMENTARIO: Integración de Formulario -->
+                <!-- Este formulario debe ser reemplazado por el código de integración de Mailchimp o su API. -->
+                <form class="space-y-4">
+                    <input type="text" placeholder="Tu Nombre" required class="w-full p-3 border border-gray-300 rounded-xl focus:ring-indigo-500 focus:border-indigo-500">
+                    <input type="email" placeholder="Tu Correo Electrónico" required class="w-full p-3 border border-gray-300 rounded-xl focus:ring-indigo-500 focus:border-indigo-500">
+                    <button type="submit" class="cta-btn w-full px-8 py-3 bg-indigo-600 text-white font-bold rounded-xl hover:bg-indigo-700">
+                        Suscribirme
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- 9. FAQ (CONFIANZA & REDUCCIÓN DE FRICCIÓN) -->
+        <section class="py-16 bg-gray-50" id="faq">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center text-indigo-800 mb-10">Preguntas Frecuentes (FAQ)</h2>
+                
+                <!-- FAQ Item 1 -->
+                <div class="mb-4 p-4 bg-white rounded-xl shadow-sm cursor-pointer border-l-4 border-pink-400">
+                    <details>
+                        <summary class="font-semibold text-gray-800">¿Cómo se garantiza que mi donación/boleto llegue al refugio?</summary>
+                        <p class="pt-2 text-gray-600 text-sm">Todo el dinero se transfiere directamente a la cuenta verificada de Orejitas Peludas. Puedes revisar nuestros reportes de transparencia en la web principal.</p>
+                    </details>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="mb-4 p-4 bg-white rounded-xl shadow-sm cursor-pointer border-l-4 border-pink-400">
+                    <details>
+                        <summary class="font-semibold text-gray-800">¿Es seguro el proceso de pago?</summary>
+                        <p class="pt-2 text-gray-600 text-sm">Sí, utilizamos pasarelas de pago seguras como Stripe/MercadoPago, que encriptan tus datos financieros. **COMENTARIO: Implementar aquí la pasarela de pago elegida.**</p>
+                    </details>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="mb-4 p-4 bg-white rounded-xl shadow-sm cursor-pointer border-l-4 border-pink-400">
+                    <details>
+                        <summary class="font-semibold text-gray-800">¿Qué pasa si no puedo asistir al evento?</summary>
+                        <p class="pt-2 text-gray-600 text-sm">¡Tu contribución sigue siendo vital! El boleto es una donación directa, por lo que el 100% de su valor se destina a la causa, asistas o no.</p>
+                    </details>
+                </div>
+
+                <p class="text-center mt-8 text-gray-500">¿Más dudas? Contáctanos por <a href="https://wa.me/numerodecontacto" class="text-green-500 font-bold hover:underline">WhatsApp directo</a>.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 10. Footer (Enlaces y Redes) -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            
+            <p class="text-sm text-gray-400 mb-4 md:mb-0">HuellitasXSiempre © 2025 | Proyecto en apoyo a Orejitas Peludas.</p>
+
+            <div class="space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white transition text-sm">Aviso de Privacidad</a>
+                <a href="#" class="text-gray-400 hover:text-white transition text-sm">Términos y Condiciones</a>
+            </div>
+
+            <div class="flex justify-center md:justify-start space-x-4 pt-4 md:pt-0">
+                <a href="#" class="text-gray-400 hover:text-pink-400 transition">FB</a>
+                <a href="#" class="text-gray-400 hover:text-pink-400 transition">IG</a>
+                <a href="#" class="text-gray-400 hover:text-pink-400 transition">TW</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para Microinteracciones y GA4 -->
+    <script>
+        // Implementación de funcionalidad básica y monitoreo
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Landing Page Cine con Causa cargada y lista para monitoreo.");
+
+            // COMENTARIO: Monitoreo GA4 y Flujo de Conversión
+            const trackConversion = (eventName, data = {}) => {
+                // Función placeholder para enviar eventos a Google Analytics 4
+                // if (typeof gtag === 'function') {
+                //     gtag('event', eventName, data);
+                // }
+                console.log(`GA4 Evento simulado: ${eventName}`, data);
+            };
+
+            // 1. Monitorear clics en CTA principal
+            const primaryCTA = document.getElementById('purchase');
+            if (primaryCTA) {
+                primaryCTA.addEventListener('click', () => {
+                    trackConversion('click_cta_principal', { location: 'hero_section' });
+                });
+            }
+
+            // 2. Monitorear Envío de Formulario
+            const mailchimpForm = document.querySelector('form');
+            if (mailchimpForm) {
+                mailchimpForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    // Lógica de envío de datos a Mailchimp (API o acción de formulario)
+                    console.log("Datos enviados a Mailchimp.");
+                    trackConversion('lead_generacion_suscripcion');
+                    mailchimpForm.innerHTML = '<p class="text-green-600 font-bold">¡Gracias por suscribirte! Revisa tu correo.</p>';
+                });
+            }
+            
+            // 3. Simulación de Integración de Pasarela de Pago
+            const paymentLinks = document.querySelectorAll('a[href="#payment-gateway"]');
+            paymentLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    // Aquí se integraría la pasarela de pago (Stripe/PayPal)
+                    console.log("Redirigiendo a pasarela de pago segura...");
+                    trackConversion('inicia_compra_boleto');
+                    // En un entorno real, esto lanzaría la API de pago o redirigiría.
+                    alert("Simulación: Serías redirigido a la pasarela de pago (ej. Stripe)."); 
+                });
+            });
+
+            // COMENTARIO: Se añadiría lógica de scroll depth si fuera necesario para GA4
+        });
+    </script>
+</body>
+</html>
